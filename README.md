@@ -123,7 +123,7 @@ I suppose the vps `ip address` is `5.182.18.65` and `domain name` is `nextjs-eco
    ```shell
     git clone https://github.com/basir/next-pg-shadcn-ecommerce
     cd next-pg-shadcn-ecommerce
-    git remote add hostinger ssh://root@5.182.18.65/root/apps/nextjs-ecommerce/repo/
+    git remote add hostinger ssh://root@5.182.18.65:/root/apps/nextjs-ecommerce/repo/
    ```
 
 9. [On Dev Machine] add dummy changes, commit and push
@@ -139,7 +139,7 @@ I suppose the vps `ip address` is `5.182.18.65` and `domain name` is `nextjs-eco
  cd /root/apps/nextjs-ecommerce/dest/
  npx drizzle-kit push
  npx tsx ./db/seed
- sudo pm2 start "npm run start" --name "nextjs-ecommerce"
+ sudo pm2 start npm --name <name> -- start
  pm2 save
  pm2 startup
 ```
